@@ -67,16 +67,18 @@ function openObsPopup(idx){
       </div>
     </div>`).join("");
 
-  popup.innerHTML = `
-    <h3>Obs pós conferência</h3>
-    <textarea id="posObsField" style="color:#fff !important; -webkit-text-fill-color:#fff !important; background-color:#333 !important; caret-color:#fff !important;" style="color:#fff; background-color:#333;" ${isAdmin?"":"readonly"}>${(r.posObs.text||"")}</textarea>
-    <div class="row" style="align-items:center;justify-content:center">
-      ${isAdmin? `<input type="file" id="imgInput" multiple accept="image/*">
-      <button onclick="addObsImages(${idx})">Anexar imagens</button>
-      <button onclick="saveObs(${idx})">Salvar</button>`:""}
-      <button onclick="closeObsPopup()">Fechar</button>
-    </div>
-    <hr/><div id="thumbs">${thumbs||'<span class="small">Sem anexos.</span>'}</div>`;
+  \1
+  // força cor branca no campo de pós-conferência
+  setTimeout(() => {
+    const f = document.getElementById('posObsField');
+    if (f) {
+      f.style.color = '#fff';
+      f.style.backgroundColor = '#333';
+      f.style.caretColor = '#fff';
+      try { f.style.webkitTextFillColor = '#fff'; } catch(e) {}
+    }
+  }, 0);
+
 
   document.body.appendChild(overlay); document.body.appendChild(popup);
 }

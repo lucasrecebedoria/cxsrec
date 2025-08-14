@@ -48,7 +48,7 @@ input, textarea, select {
     border-radius: 6px;
     box-shadow: inset -2px -2px 5px rgba(255,255,255,0.6),
                 inset 2px 2px 5px rgba(0,0,0,0.3);
-    color: #000;
+    color:#fff; -webkit-text-fill-color:#fff;
     padding: 8px;
     font-weight: bold;
 }
@@ -107,4 +107,14 @@ h1, h2, h3, label {
     color: #ffffff !important;
     -webkit-text-fill-color: #ffffff !important;
     caret-color: #ffffff !important;
+}
+
+
+/* Forçar branco em campos dentro de popups e no campo de pós conferência */
+.popup textarea,
+.popup input,
+#posObsField {
+  color:#fff !important;
+  -webkit-text-fill-color:#fff !important;
+  caret-color:#fff !important;
 }
