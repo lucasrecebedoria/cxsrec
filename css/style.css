@@ -92,3 +92,19 @@ h1, h2, h3, label {
     color: #fff !important;
     opacity: 1;
 }
+
+/* Força cor branca no campo de Pós Conferência, inclusive em WebKit/Chromium */
+#posObsField,
+.popup textarea#posObsField {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    caret-color: #ffffff !important;
+    background-color: #333333 !important;
+}
+
+.popup textarea,
+.popup textarea::placeholder {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    caret-color: #ffffff !important;
+}
