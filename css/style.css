@@ -75,3 +75,11 @@ h1, h2, h3, label {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+#pos-conferencia, .pos-conferencia { color: #fff !important; }
+
+.pos-conferencia ::placeholder,
+#pos-conferencia ::placeholder {
+    color: #fff !important;
+    opacity: 1; /* Para garantir que fique totalmente visível */
+}
