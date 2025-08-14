@@ -69,7 +69,7 @@ function openObsPopup(idx){
 
   popup.innerHTML = `
     <h3>Obs pós conferência</h3>
-    <textarea id="posObsField" ${isAdmin?"":"readonly"}>${(r.posObs.text||"")}</textarea>
+    <textarea id="posObsField" style="color:#fff; background-color:#333;" ${isAdmin?"":"readonly"}>${(r.posObs.text||"")}</textarea>
     <div class="row" style="align-items:center;justify-content:center">
       ${isAdmin? `<input type="file" id="imgInput" multiple accept="image/*">
       <button onclick="addObsImages(${idx})">Anexar imagens</button>
