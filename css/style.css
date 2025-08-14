@@ -83,3 +83,12 @@ h1, h2, h3, label {
     color: #fff !important;
     opacity: 1; /* Para garantir que fique totalmente visível */
 }
+
+#posObsField {
+    color: #fff !important;
+    background-color: #333 !important;
+}
+#posObsField::placeholder {
+    color: #fff !important;
+    opacity: 1;
+}
